@@ -9,5 +9,5 @@ const evenOrOdd = () => {
   } else {
     reply = 'no';
   }
-  return `${randomNumber} - ${reply}`
+  return `${randomNumber} ${reply}`;
 };
