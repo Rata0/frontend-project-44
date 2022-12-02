@@ -1,13 +1,19 @@
 #!/usr/bin/env node
+import gameBase from '../src/index.js';
 
-//const parityCheckGame
-const evenOrOdd = () => {
-  const randomNumber = Math.floor(Math.random() * 101);
-  let reply = '';
-  if (randomNumber % 2 === 0) {
-    reply = 'yes';
-  } else {
-    reply = 'no';
-  }
-  return `${randomNumber} ${reply}`;
+const evenOrOddGame = () => {
+  const evenCaption = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+  const isParityCheckIntruction = () => {
+    const randomNumber = Math.floor(Math.random() * 101);
+    let reply = '';
+    if (randomNumber % 2 === 0) {
+      reply = 'yes';
+    } else {
+      reply = 'no';
+    }
+    return [evenCaption, randomNumber, reply]; // Массив хранит данные -ИГРЫ
+  };
+  gameBase(isParityCheckIntruction);
 };
+evenOrOddGame();
