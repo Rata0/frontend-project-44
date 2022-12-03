@@ -1,34 +1,34 @@
 #!/usr/bin/env node
-import gameBase from '../src/index.js';
+import commonLogic from '../src/index.js';
+const description = 'What is the result of the expression?';
 
 const calsGame = () => {
-  const calsCaption = 'What is the result of the expression?';
 
-  const isCalculatorInstructions = () => {
+  const manual = () => {
     const mathSymbol = ['*', '-', '+'];
     const randomSymbol = mathSymbol[Math.floor(Math.random() * mathSymbol.length)];
     const namberOne = Math.floor(Math.random() * 101);
     const nambeTwo = Math.floor(Math.random() * 11);
-    const keySymbol = {
+    const data = {
       plus: namberOne + nambeTwo,
       minus: namberOne - nambeTwo,
       multiplication: namberOne * nambeTwo,
     };
 
     const expression = `${namberOne} ${randomSymbol} ${nambeTwo}`;
+    data.question = expression;
 
-    let reply = '';
     if (randomSymbol === '+') {
-      reply = keySymbol.plus;
+      data.reply = data.plus.toString();
     } else if (randomSymbol === '-') {
-      reply = keySymbol.minus;
+      data.reply = data.minus.toString();
     } else if (randomSymbol === '*') {
-      reply = keySymbol.multiplication;
+      data.reply = data.multiplication.toString();
     }
 
-    return [calsCaption, expression, reply]; // Массив хранит данные для использования аргуменами
+    return data;
   };
-  gameBase(isCalculatorInstructions);
+  commonLogic(manual, description);
 };
 
 calsGame();

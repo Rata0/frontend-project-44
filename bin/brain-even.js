@@ -1,19 +1,21 @@
 #!/usr/bin/env node
-import gameBase from '../src/index.js';
+import commonLogic from '../src/index.js';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const evenOrOddGame = () => {
-  const evenCaption = 'Answer "yes" if the number is even, otherwise answer "no".';
+const parityCheck = () => {
 
-  const isParityCheckIntruction = () => {
+  const manual = () => {
+    const data = {};
     const randomNumber = Math.floor(Math.random() * 101);
-    let reply = '';
+    data.question = randomNumber;
+
     if (randomNumber % 2 === 0) {
-      reply = 'yes';
+      data.reply = 'yes';
     } else {
-      reply = 'no';
+      data.reply = 'no';
     }
-    return [evenCaption, randomNumber, reply]; // Массив хранит данные -ИГРЫ
+    return data; 
   };
-  gameBase(isParityCheckIntruction);
+  commonLogic(manual, description);
 };
-evenOrOddGame();
+parityCheck();

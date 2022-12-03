@@ -1,24 +1,26 @@
 import readlineSync from 'readline-sync';
-import isWelcomeUser from './cli.js';
 
-isWelcomeUser();
+console.log('Welcome to the Brain Games!');
+const username = readlineSync.question('May I have your name? ');
+console.log(`Hello, ${username}!`);
 
-const gameBase = (gameSelected) => {
-  const assignment = gameSelected[0];
-  console.log(assignment);
+const commonLogic  = (gameData, task) => {
+  const descriptionUpload = task;
+  console.log(descriptionUpload);
 
   for (let i = 3; i > 0; i -= 1) {
-    const questionAndAnswer = gameSelected;
-    console.log(`Question: ${questionAndAnswer[1]}`);
-    const userResponse = readlineSync.question('Your answer: ');
-    const rightAnswer = gameSelected[2];
-    if (userResponse === rightAnswer) {
+    const dataUpload = gameData();
+    console.log(`Question: ${dataUpload.question}`);
+    const playerAnswer  = readlineSync.question('Your answer: ');
+    const correctAnswer = dataUpload.reply;
+    if (playerAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`${userResponse} is wrong answer ;(. Correct answer was ${rightAnswer}.\nLet's try again, ${username}!`);
+      console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${username}!`);
+      return;
     }
-  }
-  console.log(`Congratulations, ${username}`);
+  };
+  console.log(`Congratulations, ${username}!`);
 };
 
-export default gameBase;
+export default commonLogic;
