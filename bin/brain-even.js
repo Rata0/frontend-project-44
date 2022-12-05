@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import commonLogic from '../src/index.js';
+
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const parityCheck = () => {
-
   const manual = () => {
     const data = {};
     const randomNumber = Math.floor(Math.random() * 101);
