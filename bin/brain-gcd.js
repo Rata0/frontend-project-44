@@ -13,10 +13,13 @@ const nod = () => {
 
         const arrayOfNumbers = [namberOne, namberTwo];
         const minNumber = Math.min(...arrayOfNumbers);
-        const MaxNumber = Math.max(...arrayOfNumbers);
-        const dividers = [];                           // хранит делители 
-        for (let i = minNumber; i > 0; i -= 1) {
-            if (MaxNumber % i === 0) {
+        const maxNumber = Math.max(...arrayOfNumbers);
+        let greaterNumber = maxNumber;
+        let smallerNumber = minNumber;
+
+        const dividers = []; // хранит делители меньшего числа
+        for (let i = smallerNumber; i > 0; i -= 1) {
+            if (smallerNumber % i === 0) {
                 dividers.push(i);
             }
         }
@@ -24,8 +27,9 @@ const nod = () => {
        Используя перебор всех найденных делителелей     
     */         
         for (let i = 0; i < dividers.length; i += 1) { 
-            if (MaxNumber % dividers[i] === 0) {
+            if (greaterNumber % dividers[i] === 0) {
                 data.reply = String(dividers[i]);
+                break;
             }
         }
         return data;
