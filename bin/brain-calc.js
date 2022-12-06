@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import commonLogic from '../src/index.js';
+
 const description = 'What is the result of the expression?';
 
 const calsGame = () => {
-
   const manual = () => {
     const data = {};
     const mathSymbol = ['*', '-', '+'];

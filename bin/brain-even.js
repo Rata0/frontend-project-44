@@ -14,7 +14,7 @@ const parityCheck = () => {
     } else {
       data.reply = 'no';
     }
-    return data; 
+    return data;
   };
   commonLogic(manual, description);
 };
