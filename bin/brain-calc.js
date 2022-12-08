@@ -8,8 +8,8 @@ const getCalculatorResult = () => {
     const data = {};
     const mathSymbol = ['*', '-', '+'];
     const randomSymbol = mathSymbol[Math.floor(Math.random() * mathSymbol.length)];
-    const namberOne = Math.floor(Math.random() * 101);
-    const namberTwo = Math.floor(Math.random() * 11);
+    const namberOne = Math.floor(Math.random() * 100) + 1;
+    const namberTwo = Math.floor(Math.random() * 10) + 1;
     const calsKey = {
       plus: namberOne + namberTwo,
       minus: namberOne - namberTwo,

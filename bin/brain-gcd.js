@@ -6,8 +6,8 @@ const description = 'Find the greatest common divisor of given numbers.';
 const getResultNod = () => {
   const manual = () => {
     const data = {};
-    const namberOne = Math.floor(Math.random() * 101);
-    const namberTwo = Math.floor(Math.random() * 101);
+    const namberOne = Math.floor(Math.random() * 100) + 1;
+    const namberTwo = Math.floor(Math.random() * 100) + 1;
     const expression = `${namberOne} ${namberTwo}`;
     data.question = expression;
 

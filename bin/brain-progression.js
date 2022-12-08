@@ -6,8 +6,8 @@ const description = 'What number is missing in the progression?';
 const getProgressionResult = () => {
   const manual = () => {
     const data = {};
-    const startOfProgression = Math.floor(Math.random() * 101);
-    const difference = Math.floor(Math.random() * 11);
+    const startOfProgression = Math.floor(Math.random() * 100) + 1;
+    const difference = Math.floor(Math.random() * 10) + 1;
     const sequence = [startOfProgression];
     for (let i = 0; i < 9; i += 1) {
       sequence.push(sequence[i] + difference);

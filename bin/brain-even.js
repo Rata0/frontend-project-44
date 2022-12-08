@@ -6,7 +6,7 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 const getParityResult = () => {
   const manual = () => {
     const data = {};
-    const randomNumber = Math.floor(Math.random() * 101);
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
     data.question = randomNumber;
 
     if (randomNumber % 2 === 0) {
