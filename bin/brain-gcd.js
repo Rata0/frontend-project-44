@@ -3,7 +3,7 @@ import commonLogic from '../src/index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const nod = () => {
+const getResultNod = () => {
   const manual = () => {
     const data = {};
     const namberOne = Math.floor(Math.random() * 101);
@@ -36,4 +36,4 @@ const nod = () => {
   };
   commonLogic(manual, description);
 };
-nod();
+getResultNod();

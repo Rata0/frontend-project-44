@@ -3,7 +3,7 @@ import commonLogic from '../src/index.js';
 
 const description = 'What number is missing in the progression?';
 
-const progression = () => {
+const getProgressionResult = () => {
   const manual = () => {
     const data = {};
     const startOfProgression = Math.floor(Math.random() * 101);
@@ -22,4 +22,4 @@ const progression = () => {
   };
   commonLogic(manual, description);
 };
-progression();
+getProgressionResult();

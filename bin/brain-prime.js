@@ -3,7 +3,7 @@ import commonLogic from '../src/index.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const primeNumber = () => {
+const getPrimeNumber = () => {
   const manual = () => {
     const data = {};
     const randomNumber = Math.floor(Math.random() * 101);
@@ -20,4 +20,4 @@ const primeNumber = () => {
   };
   commonLogic(manual, description);
 };
-primeNumber();
+getPrimeNumber();

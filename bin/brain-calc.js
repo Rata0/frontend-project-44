@@ -3,7 +3,7 @@ import commonLogic from '../src/index.js';
 
 const description = 'What is the result of the expression?';
 
-const calsGame = () => {
+const getCalculatorResult = () => {
   const manual = () => {
     const data = {};
     const mathSymbol = ['*', '-', '+'];
@@ -32,4 +32,4 @@ const calsGame = () => {
   commonLogic(manual, description);
 };
 
-calsGame();
+getCalculatorResult();

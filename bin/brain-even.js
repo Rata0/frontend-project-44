@@ -3,7 +3,7 @@ import commonLogic from '../src/index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const parityCheck = () => {
+const getParityResult = () => {
   const manual = () => {
     const data = {};
     const randomNumber = Math.floor(Math.random() * 101);
@@ -18,4 +18,4 @@ const parityCheck = () => {
   };
   commonLogic(manual, description);
 };
-parityCheck();
+getParityResult();
